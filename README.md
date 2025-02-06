@@ -1,4 +1,4 @@
-# **Integrating RabbitMQ with MassTransit in .NET 8 Microservices**  
+# **Integrating RabbitMQ with MassTransit in .NET 9 Microservices**  
 
 ## **Introduction**  
 
@@ -6,7 +6,7 @@ RabbitMQ is a message broker that allows **asynchronous communication** between 
 
 ### **What We’ll Build**  
 
-We’ll create two microservices inside a **.NET 8 Solution (`MicroservicesSolution.sln`)**:  
+We’ll create two microservices inside a **.NET 9 Solution (`MicroservicesSolution.sln`)**:  
 
 1. **OrderService (Producer)** → Publishes an order message.  
 2. **PaymentService (Consumer)** → Listens for order messages and processes payments.  
@@ -18,7 +18,7 @@ This setup simulates a **real-world e-commerce workflow**, where an order is pla
 
 Ensure you have the following installed:  
 
-- **.NET 8 SDK**  
+- **.NET 9 SDK**  
 - **RabbitMQ** (Installed locally or via Docker)  
 - **Erlang** (Required for RabbitMQ)  
 - **Visual Studio / VS Code**  
