@@ -1,4 +1,4 @@
-# **Integrating RabbitMQ with MassTransit in .NET 8 Microservices (Using a Solution File)**  
+# **Integrating RabbitMQ with MassTransit in .NET 8 Microservices**  
 
 ## **Introduction**  
 
@@ -12,9 +12,6 @@ We’ll create two microservices inside a **.NET 8 Solution (`MicroservicesSolut
 2. **PaymentService (Consumer)** → Listens for order messages and processes payments.  
 
 This setup simulates a **real-world e-commerce workflow**, where an order is placed, and payment is processed asynchronously.  
-
-🔗 **GitHub Repository with Full Code:** [Insert GitHub Link]  
-
 ---
 
 ## **Step 1: Install Prerequisites**  
@@ -202,7 +199,7 @@ dotnet run --project OrderService
 3. **Place an Order (via Postman or cURL):**  
 
 ```sh
-curl -X POST "http://localhost:5000/api/orders" -H "Content-Type: application/json" -d '{"id":1,"product":"Laptop","price":999.99}'
+curl -X POST "http://localhost:5138/api/orders" -H "Content-Type: application/json" -d '{"id":1,"product":"Laptop","price":999.99}'
 ```
 
 🎉 **Expected Output in PaymentService Console:**  
@@ -242,13 +239,3 @@ MicroservicesSolution/
 ✅ **Supports Additional Features** → Event-driven architecture, scheduling, and more.  
 
 ---
-
-## **Next Steps**  
-
-1. **Durability:** Configure persistent messages for better reliability.  
-2. **Error Handling:** Implement retry policies and dead-letter queues.  
-3. **Multiple Consumers:** Scale out PaymentService for high throughput.  
-
-### 🔗 **GitHub Repository with Full Code:** [Insert GitHub Link]  
-
-Would you like to extend this project with more features? Let me know! 🚀
